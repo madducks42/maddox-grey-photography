@@ -1,24 +1,47 @@
-# README
+# Maddox Grey Photography
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Maddox Grey Photography is a simple app displaying the photography of Maddox Grey under her two different businesses, Shutter Siren & Perpetually Lost Photography.
 
-Things you may want to cover:
+The app was built with a Ruby on Rails backend with a PostgreSQL database. The front-end was built with React and styled with Bulma. This application also uses ActiveRecord and Images are stored in AWS S3 Cloud Storage.
 
-* Ruby version
+[See the deployed application here](https://www.maddoxgreyphotography.com)
 
-* System dependencies
+## Built with
+- [Ruby on Rails](https://guides.rubyonrails.org/v5.2/)
+- [React.js](https://reactjs.org/docs/getting-started.html)
+- [PostgreSQL](https://www.postgresql.org/docs/13/index.html)
+```
 
-* Configuration
+## Run Locally
+The setup steps expect the following tools/versions:
+- Ruby 2.6.5
+- Rails 5.2.4.4
+- PostgreSQL 13
 
-* Database creation
+###### Clone the Repo
+```
+git clone 
+```
+###### Install Dependencies
+```
+npm install 
+```
+```
+bundle install 
+```
 
-* Database initialization
+###### Create and seed the database
+```
+bundle exec rake db: migrate
+```
+```
+bundle exec rake db: seed
+```
+```
+###### Start the Rails server and webpack-dev-server
+```
+bundle exec rails s
+npm run start
+```
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+###### The application can be accessed locally at <http://localhost:3000>
