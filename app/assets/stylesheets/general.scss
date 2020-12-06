@@ -1,0 +1,57 @@
+// Color Scheme
+.color-scheme-white {
+  color: #E8EDDF;
+}
+
+.color-scheme-black {
+  color: #242423;
+}
+
+.color-scheme-red {
+  color: #ac3931;
+}
+
+.color-scheme-medium-blue {
+  color: #1f7a8c;
+}
+
+
+// General Page Setup
+html {
+  font-size: 62.5%;
+  height: 100%;
+  position: relative;
+  margin: 0px;
+  width: 100%;
+}
+
+body {
+  background-color: white;
+  font-family: "Source Serif Pro", serif;
+  font-size: 1.4rem;
+  color: #242423;
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1 0 auto;
+  width: 100%;
+}
+
+// General Font Style
+h1, h2, h3, h4, h5, h6, p, a, li {
+  font-family: "Source Serif Pro", serif;
+}
+
+// Background Images
+
+.has-home-bg-img { background: url('https://maddox-grey-production.s3.amazonaws.com/lighthouse.jpg')center center; background-size:cover; }
+
+.has-siren-bg-img { background: url('https://maddox-grey-production.s3.amazonaws.com/throbzombie.jpg')center center; background-size:cover; }
+
+.has-plp-bg-img { background: url('https://maddox-grey-production.s3.amazonaws.com/southrim.jpg')center center; background-size:cover; }
+

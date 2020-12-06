@@ -1,26 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>MaddoxGreyPhotography</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OutworldReptiles</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= csrf_meta_tags %>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,300;0,400;0,900;1,200;1,300;1,400;1,600;1,900&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/e961c52d73.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  
-  <nav class="top-bar">
-    <h1><a href="/">MaddoxGreyPhotography</a></h1>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+        <h1 class="is-size-1">Maddox Grey Photography</h1>
+      </a>
 
-    <section class="top-bar-section">
-      <ul class="right">
-        <%- if current_user -%>
-          <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
-        <%- else -%>
-          <li><%= link_to 'Sign Up', new_user_registration_path %></li>
-          <li><%= link_to 'Sign In', new_user_session_path %></li>
-        <%- end -%>
-      </ul>
-    </section>
+      <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" id="burger">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    
+    <div class="navbar-menu" id="nav-links">
+      <div class="navbar-end">
+        <a class="navbar-item is-size-5" href="/" >Home</a>
+        <a class="navbar-item is-size-5" href="/shuttersiren">Shutter Siren</a>
+        <a class="navbar-item is-size-5" href="/perpetuallylost">Perpetually Lost</a>
+        <a class="navbar-item is-size-5" href="mailto:maddoxgrey42@gmail.com">Contact</a>
+      </div>
+    </div>
+   
   </nav>
 
   <%- flash.each do |key, value| -%>
@@ -31,7 +41,11 @@
 
   <%= yield %>
 
-  <%= javascript_include_tag 'application' %>
+  <footer class="has-text-centered footer">
+    <h3>&copy; Maddox Grey Photography</h3>
+  </footer>
+    
+  <%= javascript_include_tag 'application' %> 
   
   <%- if Rails.env.development? || Rails.env.test? -%> 
     <%= javascript_tag do %>
@@ -41,5 +55,6 @@
   <%= javascript_pack_tag 'application' %>
   
   <%= yield :extra_footer %>
+   
 </body>
 </html>
